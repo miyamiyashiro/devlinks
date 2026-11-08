@@ -9,7 +9,7 @@ function Profile({ avatarSrc, avatarAlt, username, avatarSize }) {
           src={avatarSrc}
           alt={avatarAlt}
           width={avatarSize}
-          height={111}
+          height={avatarSize}
         />
       </div>
       <p className="profile__username">{username}</p>
