@@ -44,3 +44,15 @@ body {
   display: flow-root;
   min-height: 100svh;
 }
+
+@media (max-width: 600px) {
+  :root {
+    --background-image: url('./assets/background-mobile-dark.png');
+  }
+
+  :root[data-theme='light'] {
+    --background-image: url('./assets/background-mobile-light.png');
+  }
+
+  .profile__username { font-weight: 500; }
+}

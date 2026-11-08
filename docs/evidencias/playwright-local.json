@@ -1,0 +1,71 @@
+{
+  "tool": "Playwright local Node.js (not MCP)",
+  "results": [
+    {
+      "width": 360,
+      "theme": "dark",
+      "overflow": false,
+      "persistence": true,
+      "imagesLoaded": true
+    },
+    {
+      "width": 360,
+      "theme": "light",
+      "overflow": false,
+      "persistence": true,
+      "imagesLoaded": true
+    },
+    {
+      "width": 320,
+      "theme": "dark",
+      "overflow": false,
+      "persistence": true,
+      "imagesLoaded": true
+    },
+    {
+      "width": 320,
+      "theme": "light",
+      "overflow": false,
+      "persistence": true,
+      "imagesLoaded": true
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "overflow": false,
+      "persistence": true,
+      "imagesLoaded": true
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "overflow": false,
+      "persistence": true,
+      "imagesLoaded": true
+    }
+  ],
+  "keyboard": true,
+  "hrefs": [
+    {
+      "href": "https://github.com/miyamiyashiro",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.linkedin.com/in/luana-miyashiro-877308338/",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://github.com/miyamiyashiro/necessaire-ia",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.instagram.com/miyashirolua/",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    }
+  ],
+  "errors": []
+}
