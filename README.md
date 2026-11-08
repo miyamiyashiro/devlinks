@@ -48,6 +48,7 @@ No PowerShell, se necessário, use `npm.cmd` no lugar de `npm`. Abra o endereço
 
 Os registros de cada etapa ficam em [docs/evidencias](docs/evidencias). Eles representam o estado daquela etapa, não uma lista atualizada de funcionalidades.
 
-A validação via Playwright MCP ainda precisa ser realizada: não está conectado nesta sessão. Testes locais, quando registrados, não substituem essa exigência. Confirmar também os requisitos do enunciado sobre OpenCode, o envio ao GitHub e eventual publicação antes da entrega.
+O enunciado aceita OpenCode ou agente equivalente; este projeto foi desenvolvido com Codex. A verificação via Playwright MCP permanece pendente por falha de acesso à aplicação local neste ambiente. Os testes locais aprovados estão documentados. Veja a [conferência da entrega](docs/evidencias/conferencia-entrega.md).
 
 Testes locais aprovados em seis cenários de tela/tema, com capturas e resultados em [revisão responsiva](docs/evidencias/revisao-responsiva.md).
+
