@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import Profile from './components/Profile'
 import ThemeToggle from './components/ThemeToggle'
+import LinkButton from './components/LinkButton'
+import { links } from './data/links'
 import avatarDark from './assets/luana-original.jpg'
 import avatarLight from './assets/luana-sunglasses.png'
 import './App.css'
@@ -37,6 +39,15 @@ function App() {
         isLight={isLight}
         onToggle={() => setTheme(current => current === 'dark' ? 'light' : 'dark')}
       />
+      <nav aria-label="Links de Luana M">
+        <ul className="link-list">
+          {links.map(link => (
+            <li key={link.id}>
+              <LinkButton label={link.label} href={link.href} />
+            </li>
+          ))}
+        </ul>
+      </nav>
     </main>
   )
 }
