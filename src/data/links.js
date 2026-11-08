@@ -1,8 +1,6 @@
-// Textos do Figma enquanto os destinos pessoais são escolhidos.
-// Preencha href com o endereço completo para ativar cada link.
 export const links = [
-  { id: 'curso', label: 'Inscreva-se no Curso', href: null },
-  { id: 'ebook', label: 'Baixe meu e-book', href: null },
-  { id: 'portfolio', label: 'Veja meu portfólio', href: null },
-  { id: 'conheca', label: 'Conheça meu curso', href: null },
+  { id: 'github', label: 'Meu GitHub', href: 'https://github.com/miyamiyashiro' },
+  { id: 'linkedin', label: 'Meu LinkedIn', href: 'https://www.linkedin.com/in/luana-miyashiro-877308338/' },
+  { id: 'necessaire-ia', label: 'Projeto Necessaire IA', href: 'https://github.com/miyamiyashiro/necessaire-ia' },
+  { id: 'instagram', label: 'Meu Instagram', href: 'https://www.instagram.com/miyashirolua/' },
 ]
