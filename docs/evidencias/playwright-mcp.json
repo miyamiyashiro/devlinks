@@ -1,0 +1,421 @@
+[
+  {
+    "server": "@playwright/mcp",
+    "version": "0.0.84",
+    "transport": "MCP SDK InMemoryTransport (official server)",
+    "tools": [
+      "browser_close",
+      "browser_resize",
+      "browser_console_messages",
+      "browser_handle_dialog",
+      "browser_emulate_media",
+      "browser_evaluate",
+      "browser_file_upload",
+      "browser_drop",
+      "browser_find",
+      "browser_fill_form",
+      "browser_press_key",
+      "browser_type",
+      "browser_navigate",
+      "browser_navigate_back",
+      "browser_network_requests",
+      "browser_network_request",
+      "browser_run_code_unsafe",
+      "browser_take_screenshot",
+      "browser_snapshot",
+      "browser_click",
+      "browser_drag",
+      "browser_hover",
+      "browser_select_option",
+      "browser_tabs",
+      "browser_wait_for"
+    ]
+  },
+  {
+    "name": "browser_navigate",
+    "arguments": {
+      "url": "http://127.0.0.1:5187"
+    },
+    "result": {
+      "isError": false,
+      "content": [
+        {
+          "type": "text",
+          "text": "### Ran Playwright code\n```js\nawait page.goto('http://127.0.0.1:5187');\n```\n### Page\n- Page URL: http://127.0.0.1:5187/\n- Page Title: DevLinks\n### Snapshot\n- [Snapshot](.playwright-mcp\\page-2026-11-08T21-23-02-583Z.yml)\n### Events\n- New console entries: .playwright-mcp\\console-2026-11-08T21-23-02-191Z.log#L1"
+        }
+      ]
+    }
+  },
+  {
+    "name": "browser_emulate_media",
+    "arguments": {
+      "reducedMotion": "reduce"
+    },
+    "result": {
+      "isError": false,
+      "content": [
+        {
+          "type": "text",
+          "text": "### Ran Playwright code\n```js\nawait page.emulateMedia({ reducedMotion: 'reduce' });\n```"
+        }
+      ]
+    }
+  },
+  {
+    "name": "browser_resize",
+    "arguments": {
+      "width": 360,
+      "height": 800
+    },
+    "result": {
+      "isError": false,
+      "content": [
+        {
+          "type": "text",
+          "text": "### Ran Playwright code\n```js\nawait page.setViewportSize({ width: 360, height: 800 });\n```"
+        }
+      ]
+    }
+  },
+  {
+    "name": "browser_evaluate",
+    "arguments": {
+      "function": "async () => { await document.fonts.ready; await Promise.all([...document.images].map(img=>img.decode())); const theme=document.documentElement.dataset.theme; if(theme!=='dark')throw Error('Tema incorreto'); if(document.documentElement.scrollWidth>innerWidth)throw Error('Rolagem horizontal'); const links=[...document.querySelectorAll('.link-list a')].map(a=>({text:a.textContent.trim(),href:a.href,target:a.target,rel:a.rel})); if(links.length!==4)throw Error('Quantidade de links incorreta'); if(!links.every(a=>a.target==='_blank'&&a.rel.includes('noopener')))throw Error('Atributos dos links'); const img=document.querySelector('.profile__avatar'); if(!img.src.includes('original'))throw Error('Foto incorreta'); return {theme,width:innerWidth,horizontalOverflow:false,links,avatar:img.alt,socialLinks:[...document.querySelectorAll('.social-links a')].map(a=>a.href)}; }"
+    },
+    "result": {
+      "isError": false,
+      "content": [
+        {
+          "type": "text",
+          "text": "### Result\n{\n  \"theme\": \"dark\",\n  \"width\": 360,\n  \"horizontalOverflow\": false,\n  \"links\": [\n    {\n      \"text\": \"Meu GitHub\",\n      \"href\": \"https://github.com/miyamiyashiro\",\n      \"target\": \"_blank\",\n      \"rel\": \"noopener noreferrer\"\n    },\n    {\n      \"text\": \"Meu LinkedIn\",\n      \"href\": \"https://www.linkedin.com/in/luana-miyashiro-877308338/\",\n      \"target\": \"_blank\",\n      \"rel\": \"noopener noreferrer\"\n    },\n    {\n      \"text\": \"Projeto Necessaire IA\",\n      \"href\": \"https://github.com/miyamiyashiro/necessaire-ia\",\n      \"target\": \"_blank\",\n      \"rel\": \"noopener noreferrer\"\n    },\n    {\n      \"text\": \"Meu Instagram\",\n      \"href\": \"https://www.instagram.com/miyashirolua/\",\n      \"target\": \"_blank\",\n      \"rel\": \"noopener noreferrer\"\n    }\n  ],\n  \"avatar\": \"Foto de Luana M\",\n  \"socialLinks\": [\n    \"https://github.com/miyamiyashiro\",\n    \"https://www.instagram.com/miyashirolua/\",\n    \"https://www.linkedin.com/in/luana-miyashiro-877308338/\"\n  ]\n}\n### Ran Playwright code\n```js\nawait page.evaluate('async () => { await document.fonts.ready; await Promise.all([...document.images].map(img=>img.decode())); const theme=document.documentElement.dataset.theme; if(theme!==\\'dark\\')throw Error(\\'Tema incorreto\\'); if(document.documentElement.scrollWidth>innerWidth)throw Error(\\'Rolagem horizontal\\'); const links=[...document.querySelectorAll(\\'.link-list a\\')].map(a=>({text:a.textContent.trim(),href:a.href,target:a.target,rel:a.rel})); if(links.length!==4)throw Error(\\'Quantidade de links incorreta\\'); if(!links.every(a=>a.target===\\'_blank\\'&&a.rel.includes(\\'noopener\\')))throw Error(\\'Atributos dos links\\'); const img=document.querySelector(\\'.profile__avatar\\'); if(!img.src.includes(\\'original\\'))throw Error(\\'Foto incorreta\\'); return {theme,width:innerWidth,horizontalOverflow:false,links,avatar:img.alt,socialLinks:[...document.querySelectorAll(\\'.social-links a\\')].map(a=>a.href)}; }');\n```"
+        }
+      ]
+    }
+  },
+  {
+    "name": "browser_take_screenshot",
+    "arguments": {
+      "filename": "docs/evidencias/mcp-360-dark.png",
+      "fullPage": true,
+      "scale": "css"
+    },
+    "result": {
+      "isError": false,
+      "content": [
+        {
+          "type": "text",
+          "text": "### Result\n- [Screenshot of full page](docs\\evidencias\\mcp-360-dark.png)\n### Ran Playwright code\n```js\n// Screenshot full page and save it as docs\\evidencias\\mcp-360-dark.png\nawait page.screenshot({\n  fullPage: true,\n  path: 'docs\\\\evidencias\\\\mcp-360-dark.png',\n  scale: 'css',\n  type: 'png'\n});\n```"
+        }
+      ]
+    }
+  },
+  {
+    "name": "browser_navigate",
+    "arguments": {
+      "url": "http://127.0.0.1:5187"
+    },
+    "result": {
+      "isError": false,
+      "content": [
+        {
+          "type": "text",
+          "text": "### Ran Playwright code\n```js\nawait page.goto('http://127.0.0.1:5187');\n```\n### Page\n- Page URL: http://127.0.0.1:5187/\n- Page Title: DevLinks\n### Snapshot\n- [Snapshot](.playwright-mcp\\page-2026-11-08T21-23-03-397Z.yml)\n### Events\n- New console entries: .playwright-mcp\\console-2026-11-08T21-23-03-201Z.log#L1"
+        }
+      ]
+    }
+  },
+  {
+    "name": "browser_evaluate",
+    "arguments": {
+      "function": "() => { const theme=document.documentElement.dataset.theme; if(theme!=='dark' || localStorage.getItem('devlinks-theme')!==theme)throw Error('Persistencia falhou'); return {persistedTheme:theme}; }"
+    },
+    "result": {
+      "isError": false,
+      "content": [
+        {
+          "type": "text",
+          "text": "### Result\n{\n  \"persistedTheme\": \"dark\"\n}\n### Ran Playwright code\n```js\nawait page.evaluate('() => { const theme=document.documentElement.dataset.theme; if(theme!==\\'dark\\' || localStorage.getItem(\\'devlinks-theme\\')!==theme)throw Error(\\'Persistencia falhou\\'); return {persistedTheme:theme}; }');\n```"
+        }
+      ]
+    }
+  },
+  {
+    "name": "browser_click",
+    "arguments": {
+      "target": ".theme-toggle",
+      "element": "Seletor de tema"
+    },
+    "result": {
+      "isError": false,
+      "content": [
+        {
+          "type": "text",
+          "text": "### Ran Playwright code\n```js\nawait page.locator('.theme-toggle').click();\n```\n### Page\n- Page URL: http://127.0.0.1:5187/\n- Page Title: DevLinks\n### Snapshot\n- [Snapshot](.playwright-mcp\\page-2026-11-08T21-23-04-995Z.yml)"
+        }
+      ]
+    }
+  },
+  {
+    "name": "browser_evaluate",
+    "arguments": {
+      "function": "async () => { await document.fonts.ready; await Promise.all([...document.images].map(img=>img.decode())); const theme=document.documentElement.dataset.theme; if(theme!=='light')throw Error('Tema incorreto'); if(document.documentElement.scrollWidth>innerWidth)throw Error('Rolagem horizontal'); const links=[...document.querySelectorAll('.link-list a')].map(a=>({text:a.textContent.trim(),href:a.href,target:a.target,rel:a.rel})); if(links.length!==4)throw Error('Quantidade de links incorreta'); if(!links.every(a=>a.target==='_blank'&&a.rel.includes('noopener')))throw Error('Atributos dos links'); const img=document.querySelector('.profile__avatar'); if(!img.src.includes('sunglasses'))throw Error('Foto incorreta'); return {theme,width:innerWidth,horizontalOverflow:false,links,avatar:img.alt,socialLinks:[...document.querySelectorAll('.social-links a')].map(a=>a.href)}; }"
+    },
+    "result": {
+      "isError": false,
+      "content": [
+        {
+          "type": "text",
+          "text": "### Result\n{\n  \"theme\": \"light\",\n  \"width\": 360,\n  \"horizontalOverflow\": false,\n  \"links\": [\n    {\n      \"text\": \"Meu GitHub\",\n      \"href\": \"https://github.com/miyamiyashiro\",\n      \"target\": \"_blank\",\n      \"rel\": \"noopener noreferrer\"\n    },\n    {\n      \"text\": \"Meu LinkedIn\",\n      \"href\": \"https://www.linkedin.com/in/luana-miyashiro-877308338/\",\n      \"target\": \"_blank\",\n      \"rel\": \"noopener noreferrer\"\n    },\n    {\n      \"text\": \"Projeto Necessaire IA\",\n      \"href\": \"https://github.com/miyamiyashiro/necessaire-ia\",\n      \"target\": \"_blank\",\n      \"rel\": \"noopener noreferrer\"\n    },\n    {\n      \"text\": \"Meu Instagram\",\n      \"href\": \"https://www.instagram.com/miyashirolua/\",\n      \"target\": \"_blank\",\n      \"rel\": \"noopener noreferrer\"\n    }\n  ],\n  \"avatar\": \"Luana M usando óculos escuros\",\n  \"socialLinks\": [\n    \"https://github.com/miyamiyashiro\",\n    \"https://www.instagram.com/miyashirolua/\",\n    \"https://www.linkedin.com/in/luana-miyashiro-877308338/\"\n  ]\n}\n### Ran Playwright code\n```js\nawait page.evaluate('async () => { await document.fonts.ready; await Promise.all([...document.images].map(img=>img.decode())); const theme=document.documentElement.dataset.theme; if(theme!==\\'light\\')throw Error(\\'Tema incorreto\\'); if(document.documentElement.scrollWidth>innerWidth)throw Error(\\'Rolagem horizontal\\'); const links=[...document.querySelectorAll(\\'.link-list a\\')].map(a=>({text:a.textContent.trim(),href:a.href,target:a.target,rel:a.rel})); if(links.length!==4)throw Error(\\'Quantidade de links incorreta\\'); if(!links.every(a=>a.target===\\'_blank\\'&&a.rel.includes(\\'noopener\\')))throw Error(\\'Atributos dos links\\'); const img=document.querySelector(\\'.profile__avatar\\'); if(!img.src.includes(\\'sunglasses\\'))throw Error(\\'Foto incorreta\\'); return {theme,width:innerWidth,horizontalOverflow:false,links,avatar:img.alt,socialLinks:[...document.querySelectorAll(\\'.social-links a\\')].map(a=>a.href)}; }');\n```"
+        }
+      ]
+    }
+  },
+  {
+    "name": "browser_take_screenshot",
+    "arguments": {
+      "filename": "docs/evidencias/mcp-360-light.png",
+      "fullPage": true,
+      "scale": "css"
+    },
+    "result": {
+      "isError": false,
+      "content": [
+        {
+          "type": "text",
+          "text": "### Result\n- [Screenshot of full page](docs\\evidencias\\mcp-360-light.png)\n### Ran Playwright code\n```js\n// Screenshot full page and save it as docs\\evidencias\\mcp-360-light.png\nawait page.screenshot({\n  fullPage: true,\n  path: 'docs\\\\evidencias\\\\mcp-360-light.png',\n  scale: 'css',\n  type: 'png'\n});\n```"
+        }
+      ]
+    }
+  },
+  {
+    "name": "browser_navigate",
+    "arguments": {
+      "url": "http://127.0.0.1:5187"
+    },
+    "result": {
+      "isError": false,
+      "content": [
+        {
+          "type": "text",
+          "text": "### Ran Playwright code\n```js\nawait page.goto('http://127.0.0.1:5187');\n```\n### Page\n- Page URL: http://127.0.0.1:5187/\n- Page Title: DevLinks\n### Snapshot\n- [Snapshot](.playwright-mcp\\page-2026-11-08T21-23-05-893Z.yml)\n### Events\n- New console entries: .playwright-mcp\\console-2026-11-08T21-23-05-628Z.log#L1"
+        }
+      ]
+    }
+  },
+  {
+    "name": "browser_evaluate",
+    "arguments": {
+      "function": "() => { const theme=document.documentElement.dataset.theme; if(theme!=='light' || localStorage.getItem('devlinks-theme')!==theme)throw Error('Persistencia falhou'); return {persistedTheme:theme}; }"
+    },
+    "result": {
+      "isError": false,
+      "content": [
+        {
+          "type": "text",
+          "text": "### Result\n{\n  \"persistedTheme\": \"light\"\n}\n### Ran Playwright code\n```js\nawait page.evaluate('() => { const theme=document.documentElement.dataset.theme; if(theme!==\\'light\\' || localStorage.getItem(\\'devlinks-theme\\')!==theme)throw Error(\\'Persistencia falhou\\'); return {persistedTheme:theme}; }');\n```"
+        }
+      ]
+    }
+  },
+  {
+    "name": "browser_resize",
+    "arguments": {
+      "width": 1440,
+      "height": 1024
+    },
+    "result": {
+      "isError": false,
+      "content": [
+        {
+          "type": "text",
+          "text": "### Ran Playwright code\n```js\nawait page.setViewportSize({ width: 1440, height: 1024 });\n```"
+        }
+      ]
+    }
+  },
+  {
+    "name": "browser_click",
+    "arguments": {
+      "target": ".theme-toggle",
+      "element": "Seletor de tema"
+    },
+    "result": {
+      "isError": false,
+      "content": [
+        {
+          "type": "text",
+          "text": "### Ran Playwright code\n```js\nawait page.locator('.theme-toggle').click();\n```\n### Page\n- Page URL: http://127.0.0.1:5187/\n- Page Title: DevLinks\n### Snapshot\n- [Snapshot](.playwright-mcp\\page-2026-11-08T21-23-07-549Z.yml)"
+        }
+      ]
+    }
+  },
+  {
+    "name": "browser_evaluate",
+    "arguments": {
+      "function": "async () => { await document.fonts.ready; await Promise.all([...document.images].map(img=>img.decode())); const theme=document.documentElement.dataset.theme; if(theme!=='dark')throw Error('Tema incorreto'); if(document.documentElement.scrollWidth>innerWidth)throw Error('Rolagem horizontal'); const links=[...document.querySelectorAll('.link-list a')].map(a=>({text:a.textContent.trim(),href:a.href,target:a.target,rel:a.rel})); if(links.length!==4)throw Error('Quantidade de links incorreta'); if(!links.every(a=>a.target==='_blank'&&a.rel.includes('noopener')))throw Error('Atributos dos links'); const img=document.querySelector('.profile__avatar'); if(!img.src.includes('original'))throw Error('Foto incorreta'); return {theme,width:innerWidth,horizontalOverflow:false,links,avatar:img.alt,socialLinks:[...document.querySelectorAll('.social-links a')].map(a=>a.href)}; }"
+    },
+    "result": {
+      "isError": false,
+      "content": [
+        {
+          "type": "text",
+          "text": "### Result\n{\n  \"theme\": \"dark\",\n  \"width\": 1440,\n  \"horizontalOverflow\": false,\n  \"links\": [\n    {\n      \"text\": \"Meu GitHub\",\n      \"href\": \"https://github.com/miyamiyashiro\",\n      \"target\": \"_blank\",\n      \"rel\": \"noopener noreferrer\"\n    },\n    {\n      \"text\": \"Meu LinkedIn\",\n      \"href\": \"https://www.linkedin.com/in/luana-miyashiro-877308338/\",\n      \"target\": \"_blank\",\n      \"rel\": \"noopener noreferrer\"\n    },\n    {\n      \"text\": \"Projeto Necessaire IA\",\n      \"href\": \"https://github.com/miyamiyashiro/necessaire-ia\",\n      \"target\": \"_blank\",\n      \"rel\": \"noopener noreferrer\"\n    },\n    {\n      \"text\": \"Meu Instagram\",\n      \"href\": \"https://www.instagram.com/miyashirolua/\",\n      \"target\": \"_blank\",\n      \"rel\": \"noopener noreferrer\"\n    }\n  ],\n  \"avatar\": \"Foto de Luana M\",\n  \"socialLinks\": [\n    \"https://github.com/miyamiyashiro\",\n    \"https://www.instagram.com/miyashirolua/\",\n    \"https://www.linkedin.com/in/luana-miyashiro-877308338/\"\n  ]\n}\n### Ran Playwright code\n```js\nawait page.evaluate('async () => { await document.fonts.ready; await Promise.all([...document.images].map(img=>img.decode())); const theme=document.documentElement.dataset.theme; if(theme!==\\'dark\\')throw Error(\\'Tema incorreto\\'); if(document.documentElement.scrollWidth>innerWidth)throw Error(\\'Rolagem horizontal\\'); const links=[...document.querySelectorAll(\\'.link-list a\\')].map(a=>({text:a.textContent.trim(),href:a.href,target:a.target,rel:a.rel})); if(links.length!==4)throw Error(\\'Quantidade de links incorreta\\'); if(!links.every(a=>a.target===\\'_blank\\'&&a.rel.includes(\\'noopener\\')))throw Error(\\'Atributos dos links\\'); const img=document.querySelector(\\'.profile__avatar\\'); if(!img.src.includes(\\'original\\'))throw Error(\\'Foto incorreta\\'); return {theme,width:innerWidth,horizontalOverflow:false,links,avatar:img.alt,socialLinks:[...document.querySelectorAll(\\'.social-links a\\')].map(a=>a.href)}; }');\n```"
+        }
+      ]
+    }
+  },
+  {
+    "name": "browser_take_screenshot",
+    "arguments": {
+      "filename": "docs/evidencias/mcp-1440-dark.png",
+      "fullPage": true,
+      "scale": "css"
+    },
+    "result": {
+      "isError": false,
+      "content": [
+        {
+          "type": "text",
+          "text": "### Result\n- [Screenshot of full page](docs\\evidencias\\mcp-1440-dark.png)\n### Ran Playwright code\n```js\n// Screenshot full page and save it as docs\\evidencias\\mcp-1440-dark.png\nawait page.screenshot({\n  fullPage: true,\n  path: 'docs\\\\evidencias\\\\mcp-1440-dark.png',\n  scale: 'css',\n  type: 'png'\n});\n```"
+        }
+      ]
+    }
+  },
+  {
+    "name": "browser_navigate",
+    "arguments": {
+      "url": "http://127.0.0.1:5187"
+    },
+    "result": {
+      "isError": false,
+      "content": [
+        {
+          "type": "text",
+          "text": "### Ran Playwright code\n```js\nawait page.goto('http://127.0.0.1:5187');\n```\n### Page\n- Page URL: http://127.0.0.1:5187/\n- Page Title: DevLinks\n### Snapshot\n- [Snapshot](.playwright-mcp\\page-2026-11-08T21-23-08-509Z.yml)\n### Events\n- New console entries: .playwright-mcp\\console-2026-11-08T21-23-08-332Z.log#L1"
+        }
+      ]
+    }
+  },
+  {
+    "name": "browser_evaluate",
+    "arguments": {
+      "function": "() => { const theme=document.documentElement.dataset.theme; if(theme!=='dark' || localStorage.getItem('devlinks-theme')!==theme)throw Error('Persistencia falhou'); return {persistedTheme:theme}; }"
+    },
+    "result": {
+      "isError": false,
+      "content": [
+        {
+          "type": "text",
+          "text": "### Result\n{\n  \"persistedTheme\": \"dark\"\n}\n### Ran Playwright code\n```js\nawait page.evaluate('() => { const theme=document.documentElement.dataset.theme; if(theme!==\\'dark\\' || localStorage.getItem(\\'devlinks-theme\\')!==theme)throw Error(\\'Persistencia falhou\\'); return {persistedTheme:theme}; }');\n```"
+        }
+      ]
+    }
+  },
+  {
+    "name": "browser_click",
+    "arguments": {
+      "target": ".theme-toggle",
+      "element": "Seletor de tema"
+    },
+    "result": {
+      "isError": false,
+      "content": [
+        {
+          "type": "text",
+          "text": "### Ran Playwright code\n```js\nawait page.locator('.theme-toggle').click();\n```\n### Page\n- Page URL: http://127.0.0.1:5187/\n- Page Title: DevLinks\n### Snapshot\n- [Snapshot](.playwright-mcp\\page-2026-11-08T21-23-10-113Z.yml)"
+        }
+      ]
+    }
+  },
+  {
+    "name": "browser_evaluate",
+    "arguments": {
+      "function": "async () => { await document.fonts.ready; await Promise.all([...document.images].map(img=>img.decode())); const theme=document.documentElement.dataset.theme; if(theme!=='light')throw Error('Tema incorreto'); if(document.documentElement.scrollWidth>innerWidth)throw Error('Rolagem horizontal'); const links=[...document.querySelectorAll('.link-list a')].map(a=>({text:a.textContent.trim(),href:a.href,target:a.target,rel:a.rel})); if(links.length!==4)throw Error('Quantidade de links incorreta'); if(!links.every(a=>a.target==='_blank'&&a.rel.includes('noopener')))throw Error('Atributos dos links'); const img=document.querySelector('.profile__avatar'); if(!img.src.includes('sunglasses'))throw Error('Foto incorreta'); return {theme,width:innerWidth,horizontalOverflow:false,links,avatar:img.alt,socialLinks:[...document.querySelectorAll('.social-links a')].map(a=>a.href)}; }"
+    },
+    "result": {
+      "isError": false,
+      "content": [
+        {
+          "type": "text",
+          "text": "### Result\n{\n  \"theme\": \"light\",\n  \"width\": 1440,\n  \"horizontalOverflow\": false,\n  \"links\": [\n    {\n      \"text\": \"Meu GitHub\",\n      \"href\": \"https://github.com/miyamiyashiro\",\n      \"target\": \"_blank\",\n      \"rel\": \"noopener noreferrer\"\n    },\n    {\n      \"text\": \"Meu LinkedIn\",\n      \"href\": \"https://www.linkedin.com/in/luana-miyashiro-877308338/\",\n      \"target\": \"_blank\",\n      \"rel\": \"noopener noreferrer\"\n    },\n    {\n      \"text\": \"Projeto Necessaire IA\",\n      \"href\": \"https://github.com/miyamiyashiro/necessaire-ia\",\n      \"target\": \"_blank\",\n      \"rel\": \"noopener noreferrer\"\n    },\n    {\n      \"text\": \"Meu Instagram\",\n      \"href\": \"https://www.instagram.com/miyashirolua/\",\n      \"target\": \"_blank\",\n      \"rel\": \"noopener noreferrer\"\n    }\n  ],\n  \"avatar\": \"Luana M usando óculos escuros\",\n  \"socialLinks\": [\n    \"https://github.com/miyamiyashiro\",\n    \"https://www.instagram.com/miyashirolua/\",\n    \"https://www.linkedin.com/in/luana-miyashiro-877308338/\"\n  ]\n}\n### Ran Playwright code\n```js\nawait page.evaluate('async () => { await document.fonts.ready; await Promise.all([...document.images].map(img=>img.decode())); const theme=document.documentElement.dataset.theme; if(theme!==\\'light\\')throw Error(\\'Tema incorreto\\'); if(document.documentElement.scrollWidth>innerWidth)throw Error(\\'Rolagem horizontal\\'); const links=[...document.querySelectorAll(\\'.link-list a\\')].map(a=>({text:a.textContent.trim(),href:a.href,target:a.target,rel:a.rel})); if(links.length!==4)throw Error(\\'Quantidade de links incorreta\\'); if(!links.every(a=>a.target===\\'_blank\\'&&a.rel.includes(\\'noopener\\')))throw Error(\\'Atributos dos links\\'); const img=document.querySelector(\\'.profile__avatar\\'); if(!img.src.includes(\\'sunglasses\\'))throw Error(\\'Foto incorreta\\'); return {theme,width:innerWidth,horizontalOverflow:false,links,avatar:img.alt,socialLinks:[...document.querySelectorAll(\\'.social-links a\\')].map(a=>a.href)}; }');\n```"
+        }
+      ]
+    }
+  },
+  {
+    "name": "browser_take_screenshot",
+    "arguments": {
+      "filename": "docs/evidencias/mcp-1440-light.png",
+      "fullPage": true,
+      "scale": "css"
+    },
+    "result": {
+      "isError": false,
+      "content": [
+        {
+          "type": "text",
+          "text": "### Result\n- [Screenshot of full page](docs\\evidencias\\mcp-1440-light.png)\n### Ran Playwright code\n```js\n// Screenshot full page and save it as docs\\evidencias\\mcp-1440-light.png\nawait page.screenshot({\n  fullPage: true,\n  path: 'docs\\\\evidencias\\\\mcp-1440-light.png',\n  scale: 'css',\n  type: 'png'\n});\n```"
+        }
+      ]
+    }
+  },
+  {
+    "name": "browser_navigate",
+    "arguments": {
+      "url": "http://127.0.0.1:5187"
+    },
+    "result": {
+      "isError": false,
+      "content": [
+        {
+          "type": "text",
+          "text": "### Ran Playwright code\n```js\nawait page.goto('http://127.0.0.1:5187');\n```\n### Page\n- Page URL: http://127.0.0.1:5187/\n- Page Title: DevLinks\n### Snapshot\n- [Snapshot](.playwright-mcp\\page-2026-11-08T21-23-11-326Z.yml)\n### Events\n- New console entries: .playwright-mcp\\console-2026-11-08T21-23-11-023Z.log#L1"
+        }
+      ]
+    }
+  },
+  {
+    "name": "browser_evaluate",
+    "arguments": {
+      "function": "() => { const theme=document.documentElement.dataset.theme; if(theme!=='light' || localStorage.getItem('devlinks-theme')!==theme)throw Error('Persistencia falhou'); return {persistedTheme:theme}; }"
+    },
+    "result": {
+      "isError": false,
+      "content": [
+        {
+          "type": "text",
+          "text": "### Result\n{\n  \"persistedTheme\": \"light\"\n}\n### Ran Playwright code\n```js\nawait page.evaluate('() => { const theme=document.documentElement.dataset.theme; if(theme!==\\'light\\' || localStorage.getItem(\\'devlinks-theme\\')!==theme)throw Error(\\'Persistencia falhou\\'); return {persistedTheme:theme}; }');\n```"
+        }
+      ]
+    }
+  },
+  {
+    "name": "browser_console_messages",
+    "arguments": {
+      "level": "error",
+      "all": true
+    },
+    "result": {
+      "isError": false,
+      "content": [
+        {
+          "type": "text",
+          "text": "### Result\nTotal messages: 15 (Errors: 0, Warnings: 0)\nReturning 0 messages for level \"error\"\n"
+        }
+      ]
+    }
+  },
+  {
+    "name": "browser_close",
+    "arguments": {},
+    "result": {
+      "isError": false,
+      "content": [
+        {
+          "type": "text",
+          "text": "### Result\nNo open tabs. Navigate to a URL to create one.\n### Ran Playwright code\n```js\nawait page.close()\n```"
+        }
+      ]
+    }
+  }
+]

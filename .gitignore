@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Saídas temporárias do servidor MCP; evidências selecionadas em docs/evidencias
+.playwright-mcp/

@@ -48,7 +48,10 @@ No PowerShell, se necessário, use `npm.cmd` no lugar de `npm`. Abra o endereço
 
 Os registros de cada etapa ficam em [docs/evidencias](docs/evidencias). Eles representam o estado daquela etapa, não uma lista atualizada de funcionalidades.
 
-O enunciado aceita OpenCode ou agente equivalente; este projeto foi desenvolvido com Codex. A verificação via Playwright MCP permanece pendente por falha de acesso à aplicação local neste ambiente. Os testes locais aprovados estão documentados. Veja a [conferência da entrega](docs/evidencias/conferencia-entrega.md).
+O enunciado aceita OpenCode ou agente equivalente; este projeto foi desenvolvido com Codex. A verificação via servidor oficial Playwright MCP foi aprovada após execução no terminal da estudante. O relatório contém 25 chamadas sem erro e capturas nos dois temas em desktop e celular. Os testes locais anteriores também estão documentados. Veja a [conferência da entrega](docs/evidencias/conferencia-entrega.md).
 
 Testes locais aprovados em seis cenários de tela/tema, com capturas e resultados em [revisão responsiva](docs/evidencias/revisao-responsiva.md).
 
+
+- [Evidência Playwright MCP](docs/evidencias/playwright-mcp.md)
+- [Evidência Context7 MCP](docs/evidencias/context7.md)

@@ -12,9 +12,12 @@ https://deluxe-blue-bc1.notion.site/Exerc-cio-DevLinks-React-com-IA-OpenCode-MCP
 - Playwright local passou nos seis cenários registrados em revisao-responsiva.md.
 - Capturas desktop/mobile foram produzidas e conferidas.
 
-## Pendência específica de MCP
-O passo 4 pede explicitamente Playwright MCP. Instalado @playwright/mcp 0.0.84 em pasta auxiliar, sem adicionar dependência à aplicação. A conexão do cliente MCP com o servidor oficial funcionou e listou ferramentas. A navegação do navegador para a aplicação local falhou com ERR_NETWORK_ACCESS_DENIED neste ambiente. Não há teste MCP aprovado até aqui.
+## Playwright MCP concluído
+Em 08/11/2026, o roteiro foi executado no terminal da estudante e terminou com PASS. O relatório gerado foi lido e conferido: servidor oficial @playwright/mcp 0.0.84, transporte MCP SDK InMemoryTransport, 25 chamadas sem isError. Console: zero erros e zero avisos.
 
-O roteiro preparado em ../devlinks-test-tools/mcp-check.cjs inicia o Vite local, conecta o servidor oficial usando o SDK MCP e verifica temas, links, fotos, persistência e tamanhos desktop/mobile. Precisa ser executado no terminal normal da estudante. Seu registro JSON só deve ser tratado como aprovação se a execução terminar com PASS e sem isError.
+Foram verificados os temas, fotos, links e persistência em desktop e mobile. Quatro capturas foram geradas. Os testes ocorreram via cliente SDK conectado ao servidor oficial, não por uma conexão persistente do plugin no Codex.
 
-Após esse teste, revisar os resultados e enviar a evidência ao GitHub. Não é necessário refazer o aplicativo ou instalar OpenCode para cumprir a escolha de agente.
+As falhas anteriores de acesso no ambiente do agente foram superadas pela execução no terminal da estudante. Veja playwright-mcp.md e playwright-mcp.json nesta pasta.
+
+## Entrega
+O repositório contém README, AGENTS.md, capturas desktop/mobile e evidências de Context7 e Playwright. A estudante deve enviar o link do repositório pelo canal definido pelo professor. Não foi feito deploy; publicação não aparece na lista de entrega consultada.
